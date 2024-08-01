@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    font-family: 'Ubuntu';
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-image: url('/assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Header */
+
+nav {
+    border-bottom: 2px solid rgba(238, 238, 238, 0.478);
+    height: 70px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    user-select: none;
+}
+nav.closed {
+    display: none;
+}
+
+.logo {
+    color: rgb(236, 0, 0);
+    font-size: 35px;
+    line-height: 70px;
+    padding: 0px 100px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin: 0px 6px;
+}
+
+nav ul li a {
+    color: #eee;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: background-color 0.25s;
+}
+
+a.active, a:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.check-btn {
+    display: none;
+    font-size: 30px;
+    color: #eee;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+/* START MENU */
+
+.start-menu-background {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-menu-background.closed {
+    display: none;
+    user-select: none;
+}
+
+.start-menu {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 4px solid rgb(29, 21, 136);
+    border-radius: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: rgba(60, 67, 167, 0.678);
+    opacity: 1;
+}
+
+.start-menu h1 {
+    font-size: 52px;
+    margin-bottom: 50px;
+    color: #eee;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.start-menu button {
+    width: 270px;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    color: #eee;
+    border: 2px solid rgb(29, 21, 136);
+    background-color: rgb(76, 60, 167);
+    transition: background-color 0.25s;
+}
+.start-menu button:hover {
+    background-color: rgb(84, 91, 189);
+}
+
+/* DUEL PANEL */
+
+.duel-panel-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 120px 130px 0px;
+}
+
+.duel-panel-container.closed {
+    display: none;
+}
+
+.duel-panel-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 680px;
+    height: 350px;
+    border: 4px solid rgb(29, 21, 136);
+    background-color: rgba(60, 67, 167, 0.678);
+    border-radius: 8px;
+}
+
+#duel-panel-user1.lose {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+#duel-panel-user2.lose {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* User image */
+
+.duel-panel-user {
+    position: relative;
+}
+
+.profile-img {
+    position: absolute;
+    top: -35px;
+    left: 50;
+}
+
+.profile-img img {
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid rgb(29, 21, 136);
+}
+
+/* Lose alert */
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-hp {
+    padding-top: 20px;
+    font-size: 150px;
+    color: #eee;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    user-select: none;
+}
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.219);
+    padding: 10px;
+}
+
+.count-buttons {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.count-buttons div:first-of-type {
+    margin-bottom: 4px;
+}
+
+.count-buttons button {
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: rgb(76, 60, 167);
+    border: 2px solid rgb(29, 21, 136);
+    border-radius: 2px;
+    color: #eee;
+    width: 110px;
+    transition: background-color 0.35s;
+}
+.count-buttons button:hover {
+    background-color: rgb(87, 71, 177);
+    cursor: pointer;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#current-count1, #current-count2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #eee;
+    padding: 6px 11px;
+    user-select: none;
+}
+
+.apply-btn {
+    background-color: rgb(25, 102, 25);
+    padding: 10px 20px;
+    color: #eee;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 2px solid rgb(17, 82, 17);
+    border-radius: 2px;
+    transition: background-color 0.35s;
+}
+.apply-btn:hover {
+    background-color: rgb(40, 121, 40);
+}
+
+.reset-btn {
+    background-color: rgb(146, 30, 30);
+    padding: 10px 20px;
+    color: #eee;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 2px solid rgb(116, 19, 19);
+    border-radius: 2px;
+    transition: background-color 0.35s;
+}
+.reset-btn:hover {
+    background-color: rgb(165, 56, 56);
+}
+
+/* EXTRA ACTIONS */
+
+.extra-actions-background {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.extra-actions-container {
+    padding: 10px;
+    width: 280px;
+    background-color: rgba(60, 67, 167, 0.678);
+    border: 4px solid rgb(29, 21, 136);
+    border-radius: 8px;
+}
+
+.extra-actions-container.closed {
+    display: none;
+}
+
+.extra-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toss-a-coin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.coin {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+    font-size: 32px;
+    border: dashed 3px rgba(255, 255, 0, 0.644);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+.coin-text {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 0, 0.644);
+}
+
+.toss-btn {
+    height: 30px;
+    font-size: 14px;
+    padding: 4px 8px;
+    margin-top: 10px;
+    font-weight: 600;
+    background-color: rgb(76, 60, 167);
+    border: 2px solid rgb(29, 21, 136);
+    border-radius: 2px;
+    color: #eee;
+    transition: background-color 0.35s;
+}
+.toss-btn:hover {
+    background-color: rgb(87, 71, 177);
+    cursor: pointer;
+}
+
+.dice-a-roll-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dice {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+.dice-dot {
+    --top: 0%;
+    --left: 0%;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    transform: translate(calc(var(--left) * -1), calc(var(--top) * -1));
+}
+
+.dice-btn {
+    height: 30px;
+    font-size: 14px;
+    padding: 4px 8px;
+    margin-top: 10px;
+    font-weight: 600;
+    background-color: rgb(76, 60, 167);
+    border: 2px solid rgb(29, 21, 136);
+    border-radius: 2px;
+    color: #eee;
+    transition: background-color 0.35s;
+}
+.dice-btn:hover {
+    background-color: rgb(87, 71, 177);
+    cursor: pointer;
+}
+
+.restart-btn {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: rgb(146, 30, 30);
+    border: 2px solid rgb(116, 19, 19);
+    border-radius: 2px;
+    color: #eee;
+    margin-top: 12px;
+    width: 100%;
+    transition: background-color 0.35s;
+}
+
+.restart-btn:hover {
+    cursor: pointer;
+    background-color: rgb(165, 56, 56);
+}
+
+#number-display {
+    font-size: 26px;
+    color: #eee;
+}
+
+.low-hp {
+    color: #ee0000;
+}
+
+.draw {
+    color: #eeae00;
+}
+
+.off-btn {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Music Player */
+
+.music-player-background {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.music-player-container {
+    width: 270px;
+    padding: 4px;
+    background-color: rgba(218, 140, 23, 0.699);
+    border: 3px solid rgba(116, 77, 19, 0.699);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0px 0px 40px rgb(172, 108, 12);
+}
+
+.music-player-container.closed {
+    display: none;
+}
+
+.music-player-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #eee;
+    margin-bottom: 10px;
+    user-select: none;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.music-player .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    font-size: 22px;
+    color: #eee;
+    cursor: pointer;
+    margin: 0px 6px;
+}
+
+/* Volume */
+
+.volume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.vol {
+    accent-color: rgb(116, 77, 19);
+}
+
+.num {
+    color: #eee;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Adaptive design */
+
+@media (max-width: 1633px) {
+    .duel-panel-container {
+        margin: 120px 20px 0px;
+    }
+}
+
+@media (max-width: 1415px) {
+    .duel-panel-user {
+        width: 600px;
+    }
+    .count-buttons button {
+        padding: 10px 15px;
+        width: 90px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .duel-panel-user {
+        width: 500px;
+    }
+    .count-buttons button {
+        padding: 10px 5px;
+        width: 76px;
+    }
+    .apply-btn, .reset-btn {
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width: 1067px) {
+    .duel-panel-user {
+        width: 400px;
+    }
+    .count-buttons button {
+        padding: 10px 0px;
+        width: 57px;
+    }
+    .apply-btn, .reset-btn {
+        padding: 10px 5px;
+    }
+}
+
+@media (max-width: 952px) {
+    .logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .duel-panel-container {
+        margin: 120px 10px 0px;
+    }
+    .duel-panel-user {
+        width: 370px;
+    }
+    .count-buttons button {
+        padding: 10px 0px;
+        width: 55px;
+        font-size: 14px;
+    }
+    .apply-btn, .reset-btn {
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+    .check-btn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.75);
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 99;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0px;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;        
+    }
+    a:hover, a.active {
+        background-color: rgba(255, 255, 255, 0.25);
+        color: #eee;
+    }
+    #check:checked ~ ul {
+        left: 0px;
+    }
+}
+
+@media (max-width: 782px) {
+    .duel-panel-container {
+        margin: 120px 5px 0px;
+    }
+    .duel-panel-user {
+        width: 330px;
+        height: 280px;
+    }
+    .user-hp {
+        font-size: 120px;
+    }
+    .buttons-container {
+        padding: 5px;
+    }
+    .count-buttons button {
+        padding: 10px 1px;
+        width: 47px;
+        font-size: 14px;
+    }
+    .apply-btn, .reset-btn {
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+}

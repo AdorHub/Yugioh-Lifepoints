@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    font-family: 'Ubuntu';
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-image: url('/assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Header */
+
+nav {
+    border-bottom: 2px solid rgba(238, 238, 238, 0.478);
+    height: 70px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    user-select: none;
+}
+nav.closed {
+    display: none;
+}
+
+.logo {
+    color: rgb(236, 0, 0);
+    font-size: 35px;
+    line-height: 70px;
+    padding: 0px 100px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin: 0px 6px;
+}
+
+nav ul li a {
+    color: #eee;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: background-color 0.25s;
+}
+
+a.active, a:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.check-btn {
+    display: none;
+    font-size: 30px;
+    color: #eee;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+/* Duelist card */
+
+.duelist-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.duelist-container {
+    padding: 20px;
+    width: 350px;
+    height: 410px;
+    background: linear-gradient(to right, rgb(170, 101, 11), rgb(235, 162, 5), rgb(170, 101, 11));
+    border: 2px solid rgb(92, 55, 6);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9);
+}
+
+.duelist-img {
+    width: 190px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 1px solid rgb(92, 55, 6);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+}
+
+.duelist-name {
+    font-size: 32px;
+    font-weight: 500;
+    color: #131313;
+    margin-bottom: 10px;
+}
+
+.win-lose-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.win, .lose {
+    display: flex;
+    flex-direction: row;
+}
+
+.win p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 5px;
+    color: rgb(26, 146, 26);
+}
+
+.lose p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 5px;
+    color: rgb(182, 38, 38);
+}
+
+.win span {
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 10px;
+    color: #131313;
+}
+
+.lose span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #131313;
+}
+
+.reset-btn {
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid rgb(92, 55, 6);
+    border-radius: 8px;
+    cursor: pointer;
+    width: 200px;
+    margin-bottom: 10px;
+    transition: all 0.1s;
+}
+.reset-btn:hover {
+    transform: scale(1.02);
+    border: 1px solid rgb(32, 32, 177);
+    color: rgb(32, 32, 177);
+}
+
+.logout-btn {
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid rgb(92, 55, 6);
+    border-radius: 8px;
+    cursor: pointer;
+    width: 200px;
+    transition: all 0.1s;
+}
+.logout-btn:hover {
+    transform: scale(1.02);
+    border: 1px solid rgb(185, 30, 30);
+    color: rgb(185, 30, 30);
+}
+
+/* Adaptive design */
+
+@media (max-width: 952px) {
+    .logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .check-btn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.75);
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0px;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;        
+    }
+    a:hover, a.active {
+        background-color: rgba(255, 255, 255, 0.25);
+        color: #eee;
+    }
+    #check:checked ~ ul {
+        left: 0px;
+    }
+}

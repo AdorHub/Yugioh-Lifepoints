@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    font-family: 'Ubuntu';
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-image: url('/assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    user-select: none;
+    overflow: hidden;
+}
+
+.auth-background {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 153, 255, 0.651);
+    border: 2px solid rgba(0, 94, 156, 0.651);
+    border-radius: 8px;
+    padding: 20px 40px;
+    width: 400px;
+    user-select: none;
+    z-index: 99;
+}
+
+.auth-form form h2 {
+    font-size: 32px;
+    color: #eee;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 0px 25px 10px;
+    border-bottom: 2px solid rgba(0, 94, 156, 0.651);
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.input-box label {
+    font-size: 19px;
+    font-weight: 500;
+    color: #eee;
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    outline: none;
+}
+
+.file-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.file-box label {
+    font-size: 19px;
+    font-weight: 500;
+    color: #eee;
+    margin-bottom: 10px;
+}
+
+.file-box input {
+    background-color: rgba(0, 114, 190, 0.651);
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px 0px;
+    color: #eee;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: rgba(0, 153, 255, 0.651);
+    border: 2px solid rgba(0, 94, 156, 0.651);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.35s;
+    margin: 5px;
+}
+.submit-btn:hover {
+    background-color: rgba(0, 153, 255, 0.842);
+}
+
+.account-text {
+    margin-top: 10px;
+    color: #eee;
+    font-size: 16px;
+    
+}
+
+.account-text a {
+    text-decoration: underline;
+    color: rgb(0, 0, 185);
+    transition: color 0.35s;
+}
+.account-text a:hover {
+    color: rgb(39, 39, 255);
+}
+
+.error-msg {
+    height: 20px;
+    color: red;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 2px 0px 4px
+}
+
+.circle-1, .circle-2 {
+    user-select: none;
+    position: absolute;
+}
+
+.circle-1 {
+    width: 500;
+    bottom: -600px;
+    left: -100px;
+    animation: rotating 120s linear 0s infinite reverse;    
+}
+.circle-2 {
+    width: 700;
+    top: -370px;
+    right: -350px;
+    animation: rotating 110s linear 0s infinite;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
