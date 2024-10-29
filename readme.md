@@ -2,7 +2,7 @@
 Присутствует адаптивный дизайн.
 Frontend - html, css, javascript 
 Backend - php
-БД - MySQL (таблица duelists (id primary key, user_login varchar(255) unique, user_password varchar(255), profile_img varchar(255))
+БД - MySQL (Lifepoints, таблица duelists (id primary key, user_login varchar(255) unique, user_password varchar(255), profile_img varchar(255))
 
 Превью страницы дуэли:
 ![photo_5287538082557583181_w](https://github.com/user-attachments/assets/32748e41-cf60-4761-92ae-57535558a776)
