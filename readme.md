@@ -6,7 +6,6 @@
 
 <h2 align="center">Приложение для подсчета очков здоровья</h2>
 
-<br>
 
 <h2 align="center">Desktop версия</h2>
 
