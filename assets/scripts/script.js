@@ -403,7 +403,7 @@ function calculate (playerNumber)
                 applyBtn1.classList.add('off-btn');
                 resetBtn1.classList.add('off-btn');
                 //sound
-                let audio = new Audio('sounds/points-sound-start.mp3');
+                let audio = new Audio('assets/sounds/points-sound-start.mp3');
                 audio.play();
                 //animation
                 const interval = setInterval(() => {
@@ -423,7 +423,7 @@ function calculate (playerNumber)
                     resetBtn1.classList.remove('off-btn');
 
                     //end sound
-                    let audio = new Audio('sounds/points-sound-end.mp3');
+                    let audio = new Audio('assets/sounds/points-sound-end.mp3');
                     audio.play();
                 }, 1500);
             }
@@ -443,7 +443,7 @@ function calculate (playerNumber)
                 applyBtn1.classList.add('off-btn');
                 resetBtn1.classList.add('off-btn');
                 //sound
-                let audio = new Audio('sounds/points-sound-start.mp3');
+                let audio = new Audio('assets/sounds/points-sound-start.mp3');
                 audio.play();
                 //animation
                 const interval = setInterval(() => {
@@ -462,7 +462,7 @@ function calculate (playerNumber)
                         duelPanelUser1.classList.add('lose');                        
                         user1hp.textContent = 'Lose';
                         //end sound
-                        let audio = new Audio('sounds/zero-points-sound-end.mp3');
+                        let audio = new Audio('assets/sounds/zero-points-sound-end.mp3');
                         audio.play();
                         //setCookie
                         let currentLosses = Number(getCookie('losses') ?? 0);
@@ -480,7 +480,7 @@ function calculate (playerNumber)
                         applyBtn1.classList.remove('off-btn');
                         resetBtn1.classList.remove('off-btn');
                         //end sound
-                        let audio = new Audio('sounds/points-sound-end.mp3');
+                        let audio = new Audio('assets/sounds/points-sound-end.mp3');
                         audio.play();
                     }
                 }, 1500);
@@ -505,7 +505,7 @@ function calculate (playerNumber)
                 applyBtn2.classList.add('off-btn');
                 resetBtn2.classList.add('off-btn');
                 //sound
-                let audio = new Audio('sounds/points-sound-start.mp3');
+                let audio = new Audio('assets/sounds/points-sound-start.mp3');
                 audio.play();
                 //animation
                 const interval = setInterval(() => {
@@ -525,7 +525,7 @@ function calculate (playerNumber)
                     resetBtn2.classList.remove('off-btn');
 
                     //end sound
-                    let audio = new Audio('sounds/points-sound-end.mp3');
+                    let audio = new Audio('assets/sounds/points-sound-end.mp3');
                     audio.play();
                 }, 1500);
             }
@@ -545,7 +545,7 @@ function calculate (playerNumber)
                 applyBtn2.classList.add('off-btn');
                 resetBtn2.classList.add('off-btn');
                 //sound
-                let audio = new Audio('sounds/points-sound-start.mp3');
+                let audio = new Audio('assets/sounds/points-sound-start.mp3');
                 audio.play();
                 //animation
                 const interval = setInterval(() => {
@@ -564,7 +564,7 @@ function calculate (playerNumber)
                         duelPanelUser2.classList.add('lose');                        
                         user2hp.textContent = 'Lose';
                         //end sound
-                        let audio = new Audio('sounds/zero-points-sound-end.mp3');
+                        let audio = new Audio('assets/sounds/zero-points-sound-end.mp3');
                         audio.play();
                         //setCookie
                         let currentWins = Number(getCookie('wins') ?? 0);
@@ -583,7 +583,7 @@ function calculate (playerNumber)
                         resetBtn2.classList.remove('off-btn');
 
                         //end sound
-                        let audio = new Audio('sounds/points-sound-end.mp3');
+                        let audio = new Audio('assets/sounds/points-sound-end.mp3');
                         audio.play();
                     }
                 }, 1500);
