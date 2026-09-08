@@ -144,107 +144,107 @@ restartBtn.addEventListener('click', () => {
 // Music Player
 const songsList = [
     {
-        path: '../assets/music/Akiza.mp3',
+        path: '../music/Akiza.mp3',
         songName: 'Akiza',
     },
     {
-        path: '../assets/music/Alito.mp3',
+        path: '../music/Alito.mp3',
         songName: 'Alito',
     },
     {
-        path: '../assets/music/Anna-Kaboom.mp3',
+        path: '../music/Anna-Kaboom.mp3',
         songName: 'Anna Kaboom',
     },
     {
-        path: '../assets/music/Celina.mp3',
+        path: '../music/Celina.mp3',
         songName: 'Celina',
     },
     {
-        path: '../assets/music/Chazz.mp3',
+        path: '../music/Chazz.mp3',
         songName: 'Chazz',
     },
     {
-        path: '../assets/music/Crow-Hogan.mp3',
+        path: '../music/Crow-Hogan.mp3',
         songName: 'Crow Hogan',
     },
     {
-        path: '../assets/music/Jack-Atlas.mp3',
+        path: '../music/Jack-Atlas.mp3',
         songName: 'Jack Atlas',
     },
     {
-        path: '../assets/music/Joey-Wheeler.mp3',
+        path: '../music/Joey-Wheeler.mp3',
         songName: 'Joey Wheeler',
     },
     {
-        path: '../assets/music/Kaito.mp3',
+        path: '../music/Kaito.mp3',
         songName: 'Kaito',
     },
     {
-        path: '../assets/music/Kalin-Kessler.mp3',
+        path: '../music/Kalin-Kessler.mp3',
         songName: 'Kalin Kessler',
     },
     {
-        path: '../assets/music/Mako-Tsunami.mp3',
+        path: '../music/Mako-Tsunami.mp3',
         songName: 'Mako Tsunami',
     },
     {
-        path: '../assets/music/Normal-Duel.mp3',
+        path: '../music/Normal-Duel.mp3',
         songName: 'Normal Duel',
     },
     {
-        path: '../assets/music/Playmaker.mp3',
+        path: '../music/Playmaker.mp3',
         songName: 'Playmaker',
     },
     {
-        path: '../assets/music/Quattro.mp3',
+        path: '../music/Quattro.mp3',
         songName: 'Quattro',
     },
     {
-        path: '../assets/music/Seto-Kaiba.mp3',
+        path: '../music/Seto-Kaiba.mp3',
         songName: 'Seto Kaiba',
     },
     {
-        path: '../assets/music/Sherry-LeBlanc.mp3',
+        path: '../music/Sherry-LeBlanc.mp3',
         songName: 'Sherry LeBlanc',
     },
     {
-        path: '../assets/music/Soulburner.mp3',
+        path: '../music/Soulburner.mp3',
         songName: 'Soulburner',
     },
     {
-        path: '../assets/music/Supreme-King.mp3',
+        path: '../music/Supreme-King.mp3',
         songName: 'Supreme King',
     },
     {
-        path: '../assets/music/Tea-Gardner.mp3',
+        path: '../music/Tea-Gardner.mp3',
         songName: 'Tea Gardner',
     },
     {
-        path: '../assets/music/Tetsu-Trudge .mp3',
+        path: '../music/Tetsu-Trudge .mp3',
         songName: 'Tetsu Trudge ',
     },
     {
-        path: '../assets/music/Turbo-Duel.mp3',
+        path: '../music/Turbo-Duel.mp3',
         songName: 'Turbo Duel',
     },
     {
-        path: '../assets/music/Yami-Yugi.mp3',
+        path: '../music/Yami-Yugi.mp3',
         songName: 'Yami Yugi',
     },
     {
-        path: '../assets/music/Yugi-Muto.mp3',
+        path: '../music/Yugi-Muto.mp3',
         songName: 'Yugi Muto',
     },
     {
-        path: '../assets/music/Yugo.mp3',
+        path: '../music/Yugo.mp3',
         songName: 'Yugo',
     },
     {
-        path: '../assets/music/Yusei.mp3',
+        path: '../music/Yusei.mp3',
         songName: 'Yusei',
     },
     {
-        path: '../assets/music/Zuzu.mp3',
+        path: '../music/Zuzu.mp3',
         songName: 'Zuzu',
     }
 ];
@@ -403,7 +403,7 @@ function calculate (playerNumber)
                 applyBtn1.classList.add('off-btn');
                 resetBtn1.classList.add('off-btn');
                 //sound
-                let audio = new Audio('../assets/sounds/points-sound-start.mp3');
+                let audio = new Audio('../sounds/points-sound-start.mp3');
                 audio.play();
                 //animation
                 const interval = setInterval(() => {
@@ -423,7 +423,7 @@ function calculate (playerNumber)
                     resetBtn1.classList.remove('off-btn');
 
                     //end sound
-                    let audio = new Audio('../assets/sounds/points-sound-end.mp3');
+                    let audio = new Audio('../sounds/points-sound-end.mp3');
                     audio.play();
                 }, 1500);
             }
@@ -443,7 +443,7 @@ function calculate (playerNumber)
                 applyBtn1.classList.add('off-btn');
                 resetBtn1.classList.add('off-btn');
                 //sound
-                let audio = new Audio('../assets/sounds/points-sound-start.mp3');
+                let audio = new Audio('../sounds/points-sound-start.mp3');
                 audio.play();
                 //animation
                 const interval = setInterval(() => {
@@ -462,7 +462,7 @@ function calculate (playerNumber)
                         duelPanelUser1.classList.add('lose');                        
                         user1hp.textContent = 'Lose';
                         //end sound
-                        let audio = new Audio('../assets/sounds/zero-points-sound-end.mp3');
+                        let audio = new Audio('../sounds/zero-points-sound-end.mp3');
                         audio.play();
                         //setCookie
                         let currentLosses = Number(getCookie('losses') ?? 0);
@@ -480,7 +480,7 @@ function calculate (playerNumber)
                         applyBtn1.classList.remove('off-btn');
                         resetBtn1.classList.remove('off-btn');
                         //end sound
-                        let audio = new Audio('../assets/sounds/points-sound-end.mp3');
+                        let audio = new Audio('../sounds/points-sound-end.mp3');
                         audio.play();
                     }
                 }, 1500);
@@ -505,7 +505,7 @@ function calculate (playerNumber)
                 applyBtn2.classList.add('off-btn');
                 resetBtn2.classList.add('off-btn');
                 //sound
-                let audio = new Audio('../assets/sounds/points-sound-start.mp3');
+                let audio = new Audio('../sounds/points-sound-start.mp3');
                 audio.play();
                 //animation
                 const interval = setInterval(() => {
@@ -525,7 +525,7 @@ function calculate (playerNumber)
                     resetBtn2.classList.remove('off-btn');
 
                     //end sound
-                    let audio = new Audio('../assets/sounds/points-sound-end.mp3');
+                    let audio = new Audio('../sounds/points-sound-end.mp3');
                     audio.play();
                 }, 1500);
             }
@@ -545,7 +545,7 @@ function calculate (playerNumber)
                 applyBtn2.classList.add('off-btn');
                 resetBtn2.classList.add('off-btn');
                 //sound
-                let audio = new Audio('../assets/sounds/points-sound-start.mp3');
+                let audio = new Audio('../sounds/points-sound-start.mp3');
                 audio.play();
                 //animation
                 const interval = setInterval(() => {
@@ -564,7 +564,7 @@ function calculate (playerNumber)
                         duelPanelUser2.classList.add('lose');                        
                         user2hp.textContent = 'Lose';
                         //end sound
-                        let audio = new Audio('../assets/sounds/zero-points-sound-end.mp3');
+                        let audio = new Audio('../sounds/zero-points-sound-end.mp3');
                         audio.play();
                         //setCookie
                         let currentWins = Number(getCookie('wins') ?? 0);
@@ -583,7 +583,7 @@ function calculate (playerNumber)
                         resetBtn2.classList.remove('off-btn');
 
                         //end sound
-                        let audio = new Audio('../assets/sounds/points-sound-end.mp3');
+                        let audio = new Audio('../sounds/points-sound-end.mp3');
                         audio.play();
                     }
                 }, 1500);
